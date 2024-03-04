@@ -1,0 +1,16 @@
+
+<scroll-view class="scrollarea" scroll-y type="list">
+<view class="container">
+  <rich-text>
+    <span style="font-weight: bold; color: #000;display: block;font-size: 24px;">太阳花英语</span>
+  </rich-text>
+  <view class="image-list">
+    <view wx:for="{{categories}}" wx:for-index="id" wx:for-item="item" class="image-item">
+      <navigator url="/pages/list/index?id={{item.id}}">
+        <image src="{{item.banner}}" class="img"/>
+        <div class="image-caption">{{item.name}}</div>
+      </navigator>
+    </view>
+  </view>
+  </view>
+</scroll-view>

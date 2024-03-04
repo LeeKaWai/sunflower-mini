@@ -1,0 +1,41 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+.container {
+  padding-top:100px;
+}
+
+.image-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding:20px 10px 20px 10px;
+        }
+
+        .image-item {
+            position: relative;
+            margin: 10px 0px 10px 0px;
+        }
+
+        .image-item image {
+            max-width: 100%;
+            height: 165px;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .image-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }

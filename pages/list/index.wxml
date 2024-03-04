@@ -1,0 +1,25 @@
+<view class="item-list">
+  <!-- 使用wx:for循环渲染列表数据 -->
+  <block wx:for="{{list }}" wx:for-item="item" wx:for-index="index">
+    <view class="item" wx:if="{{ index % 2 === 0 || index === itemList.length - 1 }}">
+      <!-- 左侧item，或者最后一个item -->
+      <image class="item-image" src="{{ item.banner }}" mode="aspectFill"></image>
+       <rich-text class="item-name">
+            <!-- 英文名字加粗黑色 -->
+            <span style="font-weight: bold; color: #000; display: block;">{{ item.englishName }}</span>
+            <!-- 换行显示中文名字和英标，灰色文字 -->
+            <span style="display: block; color: #888;">{{ item.chineseName }} . {{ item.englishAbbreviation }}</span>
+        </rich-text>
+    </view>
+    <view class="item" wx:else>
+      <!-- 右侧item -->
+      <image class="item-image" src="{{ item.banner }}" mode="aspectFill"></image>
+     <rich-text class="item-name">
+        <!-- 英文名字加粗黑色 -->
+        <span style="font-weight: bold; color: #000;display: block;">{{ item.englishName }}</span>
+        <!-- 换行显示中文名字和英标，灰色文字 -->
+        <span style="display: block; color: #888;">{{ item.chineseName }} . {{ item.englishAbbreviation }}</span>
+    </rich-text>
+    </view>
+  </block>
+</view>
